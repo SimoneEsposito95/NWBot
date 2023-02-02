@@ -22,7 +22,6 @@ namespace TableBot
             _client.Ready += Client_Ready;
             _client.SlashCommandExecuted += SlashCommandHandler;
 
-            //var token = "MTA3MDYyODc3NzA4MTcyMDg0Mg.GUUx7V.ynf0mpL6LiH29MTi7aiB7kLrok83XAx64lFd2U";
             string token = Environment.GetEnvironmentVariable("token");
 
             await _client.LoginAsync(TokenType.Bot, token);
