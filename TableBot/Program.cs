@@ -22,15 +22,12 @@ namespace TableBot
             _client.Ready += Client_Ready;
             _client.SlashCommandExecuted += SlashCommandHandler;
 
-            //  You can assign your bot token to a string, and pass that in to connect.
-            //  This is, however, insecure, particularly if you plan to have your code hosted in a public repository.
-            var token = "MTA3MDYyODc3NzA4MTcyMDg0Mg.GUUx7V.ynf0mpL6LiH29MTi7aiB7kLrok83XAx64lFd2U";
-
+            //var token = "MTA3MDYyODc3NzA4MTcyMDg0Mg.GUUx7V.ynf0mpL6LiH29MTi7aiB7kLrok83XAx64lFd2U";
+            string token = Environment.GetEnvironmentVariable("token");
 
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
 
-            // Block this task until the program is closed.
             await Task.Delay(-1);
         }
 
