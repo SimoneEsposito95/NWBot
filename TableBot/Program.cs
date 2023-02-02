@@ -27,7 +27,7 @@ namespace TableBot
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
 
-            await Task.Delay(-1);
+            await Task.Delay(Timeout.Infinite);
         }
 
         private Task Log(LogMessage msg)
