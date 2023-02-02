@@ -38,7 +38,7 @@ namespace TableBot
 
         public async Task Client_Ready()
         {
-            List<ApplicationCommandProperties> applicationCommandProperties = new();
+            List<ApplicationCommandProperties> applicationCommandProperties = new List<ApplicationCommandProperties>();
 
             applicationCommandProperties.Add(levelDungeonCommand.SlashCommandBuilder().Build());
 
